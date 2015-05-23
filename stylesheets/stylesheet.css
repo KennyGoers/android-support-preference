@@ -441,18 +441,18 @@ p {
 }
 
 a {
-  color: #2879d0;
+  color: #F57F17;
 }
 a:hover {
-  color: #2268b2;
+  color: #FBC02D;
 }
 
 header {
   padding-top: 40px;
   padding-bottom: 40px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-  border-bottom: solid 1px #275da1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  background: #689f38 url(../images/header-bg2.png) 0 0 repeat-x;
+  border-bottom: solid 1px #689f38;
 }
 
 header h1 {
@@ -473,7 +473,7 @@ header h2 {
   font-size: 26px;
   font-weight: normal;
   line-height: 1.3;
-  color: #9ddcff;
+  color: #F1F8E9;
   letter-spacing: 0;
 }
 
@@ -521,7 +521,7 @@ a.button {
   height: 58px;
   padding-top: 22px;
   padding-left: 68px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 23px;
   line-height: 1.2;
   color: #fff;
@@ -542,7 +542,7 @@ aside a.button {
   padding-left: 64px;
   margin-bottom: 20px;
   font-size: 21px;
-  background: transparent url(../images/download-button.png) 0 0 no-repeat;
+  background: transparent url(../images/download-button2.png) 0 0 no-repeat;
 }
 
 code, pre {
@@ -567,7 +567,7 @@ pre {
 }
 pre code {
   padding: 0;
-  color: #2879d0;
+  color: #F57F17;
   background-color: #fff;
   border: none;
 }
@@ -614,7 +614,7 @@ form {
 #main-content h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 2.8em;
   font-weight: normal;
   color: #474747;
@@ -625,13 +625,13 @@ form {
 #main-content h1:before {
   padding-right: 0.3em;
   margin-left: -0.9em;
-  color: #9ddcff;
+  color: #F57F17;
   content: "/";
 }
 
 #main-content h2 {
   margin-bottom: 8px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 22px;
   font-weight: bold;
   color: #474747;
@@ -641,13 +641,13 @@ form {
   padding-right: 0.3em;
   margin-left: -1.5em;
   content: "//";
-  color: #9ddcff;
+  color: #F57F17;
 }
 
 #main-content h3 {
   margin-top: 24px;
   margin-bottom: 8px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 18px;
   font-weight: bold;
   color: #474747;
@@ -658,12 +658,12 @@ form {
   padding-right: 0.3em;
   margin-left: -2em;
   content: "///";
-  color: #9ddcff;
+  color: #F57F17;
 }
 
 #main-content h4 {
   margin-bottom: 8px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 15px;
   font-weight: bold;
   color: #474747;
@@ -674,12 +674,12 @@ h4:before {
   padding-right: 0.3em;
   margin-left: -2.8em;
   content: "////";
-  color: #9ddcff;
+  color: #F57F17;
 }
 
 #main-content h5 {
   margin-bottom: 8px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 14px;
   color: #474747;
   text-indent: 3px;
@@ -688,12 +688,12 @@ h5:before {
   padding-right: 0.3em;
   margin-left: -3.2em;
   content: "/////";
-  color: #9ddcff;
+  color: #F57F17;
 }
 
 #main-content h6 {
   margin-bottom: 8px;
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: .8em;
   color: #474747;
   text-indent: 3px;
@@ -702,7 +702,7 @@ h6:before {
   padding-right: 0.3em;
   margin-left: -3.7em;
   content: "//////";
-  color: #9ddcff;
+  color: #F57F17;
 }
 
 p {
@@ -834,9 +834,9 @@ footer a:hover {
     margin-top: 15px;
     font-size: 13px;
     line-height: 1;
-    color: #2879d0;
+    color: #fff;
     text-align: center;
-    background-color: #9ddcff;
+    background-color: #F57F17;
     background-image: none;
     border-radius: 5px;
     -moz-border-radius: 5px;

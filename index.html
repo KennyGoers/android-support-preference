@@ -1,337 +1,418 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <!--<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet'
+          type='text/css'>-->
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+    <link rel="shortcut icon" href="ic_web.png"/>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <title>Support Preference for Android by consp1racy</title>
-  </head>
+</head>
 
-  <body>
-    <header>
-      <div class="inner">
+<body>
+<header>
+    <div class="inner">
         <h1>Support Preference for Android</h1>
+
         <h2>Android Preferences according to Material design specs</h2>
-        <a href="https://github.com/consp1racy/android-support-preference" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+        <a href="https://github.com/consp1racy/android-support-preference" class="button">
+            <small>View project on</small>
+            GitHub</a>
+    </div>
+</header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
+<div id="content-wrapper">
+    <div class="inner clearfix">
         <section id="main-content">
-          <h1>
-<a id="material-preference" class="anchor" href="#material-preference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Material Preference</h1>
+            <h1>
+                <a id="material-preference" class="anchor" href="#material-preference"
+                   aria-hidden="true"><span class="octicon octicon-link"></span></a>Material
+                Preference</h1>
 
-<p><img src="./sample/src/main/res/mipmap-xxhdpi/ic_launcher.png" align="right"></p>
+            <img src="ic_web.png" align="right"
+                 style="width: 128px; height: 128px;">
 
-<p>Material theme for preference widgets.</p>
+            <p>Material theme for preference widgets.</p>
 
-<p>Backporting dat material look <em>and</em> functionality.</p>
+            <p>Backporting dat material look <em>and</em> functionality.</p>
 
-<p>Available from API 7. Depends on appcompat-v7-r22.1.1.</p>
+            <p>Available from API 7. Depends on appcompat-v7-r22.1.1.</p>
 
-<h2>
-<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+            <h2>
+                <a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span
+                        class="octicon octicon-link"></span></a>Screenshots</h2>
 
-<p>All taken from an API 10 device.</p>
+            <p>All taken from an API 10 device.</p>
 
-<p><img src="./docs/device-2015-05-20-041715.png" alt="Overview 1"> 
-<img src="./docs/device-2015-05-20-043843.png" alt="Overview 2"> 
-<img src="./docs/device-2015-05-20-044009.png" alt="EditTextPreference"> 
-<img src="./docs/device-2015-05-20-044135.png" alt="MultiSelectListPreference"> 
-<img src="./docs/device-2015-05-20-042549.png" alt="RingtonePreference"> 
-<img src="./docs/device-2015-05-20-044237.png" alt="ListPreference"> 
-<img src="./docs/device-2015-05-23-152932.png" alt="SeekBarDialogPreference"> 
-<img src="./docs/device-2015-05-23-160720.png" alt="SeekBarPreference"></p>
+            <p><img src="./docs/device-2015-05-20-041715.png" alt="Overview 1"> 
+                <img src="./docs/device-2015-05-20-043843.png" alt="Overview 2"> 
+                <img src="./docs/device-2015-05-20-044009.png" alt="EditTextPreference"> 
+                <img src="./docs/device-2015-05-20-044135.png" alt="MultiSelectListPreference"> 
+                <img src="./docs/device-2015-05-20-042549.png" alt="RingtonePreference"> 
+                <img src="./docs/device-2015-05-20-044237.png" alt="ListPreference"> 
+                <img src="./docs/device-2015-05-23-152932.png" alt="SeekBarDialogPreference"> 
+                <img src="./docs/device-2015-05-23-160720.png" alt="SeekBarPreference"></p>
 
-<h2>
-<a id="contents" class="anchor" href="#contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contents</h2>
+            <h2>
+                <a id="contents" class="anchor" href="#contents" aria-hidden="true"><span
+                        class="octicon octicon-link"></span></a>Contents</h2>
 
-<ul>
-<li><code>Preference</code></li>
-<li><code>CheckBoxPreference</code></li>
-<li>
-<code>SwitchPreference</code>
+            <ul>
+                <li><code>Preference</code></li>
+                <li><code>CheckBoxPreference</code></li>
+                <li>
+                    <code>SwitchPreference</code>
 
-<ul>
-<li>Using <code>SwitchCompat</code> available from API 7</li>
-</ul>
-</li>
-<li>
-<code>DialogPreference</code>
+                    <ul>
+                        <li>Using <code>SwitchCompat</code> available from API 7</li>
+                    </ul>
+                </li>
+                <li>
+                    <code>DialogPreference</code>
 
-<ul>
-<li>Uses AppCompat Alert Dialog Material theme</li>
-</ul>
-</li>
-<li>
-<code>EditTextPreference</code> extends <code>DialogPreference</code>
-</li>
-<li>
-<code>ListPreference</code> extends <code>DialogPreference</code>
-</li>
-<li>
-<code>MultiSelectListPreference</code> extends <code>DialogPreference</code>
+                    <ul>
+                        <li>Uses AppCompat Alert Dialog Material theme</li>
+                    </ul>
+                </li>
+                <li>
+                    <code>EditTextPreference</code> extends <code>DialogPreference</code>
+                </li>
+                <li>
+                    <code>ListPreference</code> extends <code>DialogPreference</code>
+                </li>
+                <li>
+                    <code>MultiSelectListPreference</code> extends <code>DialogPreference</code>
 
-<ul>
-<li>Now available from API 7</li>
-</ul>
-</li>
-<li>
-<code>SeekBarDialogPreference</code> extends <code>DialogPreference</code>
+                    <ul>
+                        <li>Now available from API 7</li>
+                    </ul>
+                </li>
+                <li>
+                    <code>SeekBarDialogPreference</code> extends <code>DialogPreference</code>
 
-<ul>
-<li>Made public, appropriately tinted <code>SeekBar</code>
-</li>
-</ul>
-</li>
-<li>
-<code>SeekBarPreference</code>
+                    <ul>
+                        <li>Made public, appropriately tinted <code>SeekBar</code>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <code>SeekBarPreference</code>
 
-<ul>
-<li>Made public, appropriately tinted <code>Seekbar</code>
-</li>
-<li>According to <a href="http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs">http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs</a>
-</li>
-</ul>
-</li>
-<li>
-<code>RingtonePreference</code>
+                    <ul>
+                        <li>Made public, appropriately tinted <code>Seekbar</code>
+                        </li>
+                        <li>According to <a
+                                href="http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs">http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <code>RingtonePreference</code>
 
-<ul>
-<li>Extracted Ringtone Picker Activity from AOSP</li>
-<li>Customizable AppCompat theme</li>
-</ul>
-</li>
-<li>
-<code>AppCompatPreferenceActivity</code>
+                    <ul>
+                        <li>Extracted Ringtone Picker Activity from AOSP</li>
+                        <li>Customizable AppCompat theme</li>
+                    </ul>
+                </li>
+                <li>
+                    <code>AppCompatPreferenceActivity</code>
 
-<ul>
-<li>Combines <code>PreferenceActivity</code> with appcompat-v7 theme and custom <code>PreferenceInflater</code>
-</li>
-</ul>
-</li>
-<li> <code>PreferenceFragment</code>
+                    <ul>
+                        <li>Combines <code>PreferenceActivity</code> with appcompat-v7 theme and
+                            custom <code>PreferenceInflater</code>
+                        </li>
+                    </ul>
+                </li>
+                <li><code>PreferenceFragment</code>
 
-<ul>
-<li>Combines <code>android.preference.PreferenceFragment</code> with custom <code>PreferenceInflater</code>
-</li>
-</ul>
-</li>
-<li>
-<code>SharedPreferencesCompat</code>
+                    <ul>
+                        <li>Combines <code>android.preference.PreferenceFragment</code> with custom
+                            <code>PreferenceInflater</code>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <code>SharedPreferencesCompat</code>
 
-<ul>
-<li>
-<code>getStringSet</code> and <code>putStringSet</code> methods allow persisting string sets even before API 11</li>
-</ul>
-</li>
-</ul>
+                    <ul>
+                        <li>
+                            <code>getStringSet</code> and <code>putStringSet</code> methods allow
+                            persisting string sets even before API 11
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-<h2>
-<a id="how-to-get-the-library" class="anchor" href="#how-to-get-the-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to get the library?</h2>
+            <h2>
+                <a id="how-to-get-the-library" class="anchor" href="#how-to-get-the-library"
+                   aria-hidden="true"><span class="octicon octicon-link"></span></a>How to get the
+                library?</h2>
 
-<div class="highlight highlight-groovy"><pre>dependencies {
-    compile <span class="pl-s"><span class="pl-pds">'</span>net.xpece.android:support-preference:0.4.2<span class="pl-pds">'</span></span>
-}</pre></div>
+            <div class="highlight highlight-groovy"><pre>dependencies {
+    compile <span class="pl-s"><span class="pl-pds">'</span>net.xpece.android:support-preference:0.4.2<span
+                        class="pl-pds">'</span></span>
+}</pre>
+            </div>
 
-<h2>
-<a id="how-to-use-the-library" class="anchor" href="#how-to-use-the-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use the library?</h2>
+            <h2>
+                <a id="how-to-use-the-library" class="anchor" href="#how-to-use-the-library"
+                   aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use the
+                library?</h2>
 
-<p>For now: Please read known issues at the bottom of this page and carefully examine the sample project.</p>
+            <p>For now: Please read known issues at the bottom of this page and carefully examine
+                the sample project.</p>
 
-<p>Your preference activity or preference fragment should extend <code>AppCompatPreferenceActivity</code> or custom <code>PreferenceFragment</code> respectively.</p>
+            <p>Your preference activity or preference fragment should extend <code>AppCompatPreferenceActivity</code>
+                or custom <code>PreferenceFragment</code> respectively.</p>
 
-<p>The theme used by this activity must include the following attributes:</p>
+            <p>The theme used by this activity must extend one of</p>
 
-<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android:preferenceCategoryStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.Category&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android:preferenceInformationStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.Information&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android:preferenceScreenStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.PreferenceScreen&lt;/<span class="pl-ent">item</span>&gt;
+            <ul>
+                <li><code>Theme.AppCompat.Preference</code></li>
+                <li><code>Theme.AppCompat.Light.Preference</code></li>
+                <li><code>Theme.AppCompat.Light.DarkActionBar.Preference</code></li>
+            </ul>
 
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>preferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>checkBoxPreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.CheckBoxPreference&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>dialogPreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.DialogPreference&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>editTextPreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.DialogPreference.EditTextPreference&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>ringtonePreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.RingtonePreference&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>switchPreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.SwitchPreference&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>seekBarPreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.SeekBarPreference&lt;/<span class="pl-ent">item</span>&gt;
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>seekBarDialogPreferenceStyle<span class="pl-pds">"</span></span>&gt;@style/Preference.Material.DialogPreference.SeekBarDialogPreference&lt;/<span class="pl-ent">item</span>&gt;
+            <p>which you should customize further at least like so:</p>
 
-&lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>asp_textAppearanceListItemSecondary<span class="pl-pds">"</span></span>&gt;@style/TextAppearance.AppCompat.Body1&lt;/<span class="pl-ent">item</span>&gt;</pre></div>
+            <div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">style</span> <span
+                    class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>AppTheme.Preference<span
+                    class="pl-pds">"</span></span> <span class="pl-e">parent</span>=<span
+                    class="pl-s"><span class="pl-pds">"</span>Theme.AppCompat.Light.DarkActionBar.Preference<span
+                    class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>colorPrimary<span class="pl-pds">"</span></span>&gt;@color/primary&lt;/<span
+                        class="pl-ent">item</span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>colorPrimaryDark<span class="pl-pds">"</span></span>&gt;@color/primary_dark&lt;/<span
+                        class="pl-ent">item</span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>colorAccent<span class="pl-pds">"</span></span>&gt;@color/accent&lt;/<span
+                        class="pl-ent">item</span>&gt;
 
-<p>If that's too verbose the theme may extend one of</p>
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>android:textColorHighlight<span
+                        class="pl-pds">"</span></span>&gt;@color/text_highlight&lt;/<span
+                        class="pl-ent">item</span>&gt;
 
-<ul>
-<li><code>Theme.AppCompat.Preference</code></li>
-<li><code>Theme.AppCompat.Light.Preference</code></li>
-<li><code>Theme.AppCompat.Light.DarkActionBar.Preference</code></li>
-</ul>
-
-<p>which you should customize further at least like so:</p>
-
-<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">style</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>AppTheme.Preference<span class="pl-pds">"</span></span> <span class="pl-e">parent</span>=<span class="pl-s"><span class="pl-pds">"</span>Theme.AppCompat.Light.DarkActionBar.Preference<span class="pl-pds">"</span></span>&gt;
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>colorPrimary<span class="pl-pds">"</span></span>&gt;@color/primary&lt;/<span class="pl-ent">item</span>&gt;
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>colorPrimaryDark<span class="pl-pds">"</span></span>&gt;@color/primary_dark&lt;/<span class="pl-ent">item</span>&gt;
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>colorAccent<span class="pl-pds">"</span></span>&gt;@color/accent&lt;/<span class="pl-ent">item</span>&gt;
-
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android:textColorHighlight<span class="pl-pds">"</span></span>&gt;@color/text_highlight&lt;/<span class="pl-ent">item</span>&gt;
-
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>alertDialogTheme<span class="pl-pds">"</span></span>&gt;@style/AppTheme.Dialog.Alert&lt;/<span class="pl-ent">item</span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>alertDialogTheme<span class="pl-pds">"</span></span>&gt;@style/AppTheme.Dialog.Alert&lt;/<span
+                        class="pl-ent">item</span>&gt;
 &lt;/<span class="pl-ent">style</span>&gt;
 
-&lt;<span class="pl-ent">style</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>AppTheme.Dialog.Alert<span class="pl-pds">"</span></span> <span class="pl-e">parent</span>=<span class="pl-s"><span class="pl-pds">"</span>Theme.AppCompat.Light.Dialog.Alert<span class="pl-pds">"</span></span>&gt;
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>colorPrimary<span class="pl-pds">"</span></span>&gt;@color/primary&lt;/<span class="pl-ent">item</span>&gt;
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>colorPrimaryDark<span class="pl-pds">"</span></span>&gt;@color/primary_dark&lt;/<span class="pl-ent">item</span>&gt;
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>colorAccent<span class="pl-pds">"</span></span>&gt;@color/accent&lt;/<span class="pl-ent">item</span>&gt;
+&lt;<span class="pl-ent">style</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>AppTheme.Dialog.Alert<span
+                        class="pl-pds">"</span></span> <span class="pl-e">parent</span>=<span
+                        class="pl-s"><span class="pl-pds">"</span>Theme.AppCompat.Light.Dialog.Alert<span
+                        class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>colorPrimary<span class="pl-pds">"</span></span>&gt;@color/primary&lt;/<span
+                        class="pl-ent">item</span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>colorPrimaryDark<span class="pl-pds">"</span></span>&gt;@color/primary_dark&lt;/<span
+                        class="pl-ent">item</span>&gt;
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>colorAccent<span class="pl-pds">"</span></span>&gt;@color/accent&lt;/<span
+                        class="pl-ent">item</span>&gt;
 
-    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android:textColorHighlight<span class="pl-pds">"</span></span>&gt;@color/text_highlight&lt;/<span class="pl-ent">item</span>&gt;
-&lt;/<span class="pl-ent">style</span>&gt;</pre></div>
+    &lt;<span class="pl-ent">item</span> <span class="pl-e">name</span>=<span class="pl-s"><span
+                        class="pl-pds">"</span>android:textColorHighlight<span
+                        class="pl-pds">"</span></span>&gt;@color/text_highlight&lt;/<span
+                        class="pl-ent">item</span>&gt;
+&lt;/<span class="pl-ent">style</span>&gt;</pre>
+            </div>
 
-<p>If you'll be using custom <code>RingtonePreference</code> your app needs to request the <code>android.permission.READ_EXTERNAL_STORAGE</code> permission in its manifest. If for some reason you cannot do this, use <code>android.preference.RingtonePreference</code> which will use the system dialog.</p>
+            <p>If you'll be using custom <code>RingtonePreference</code> your app needs to request
+                the <code>android.permission.READ_EXTERNAL_STORAGE</code> permission in its
+                manifest. If for some reason you cannot do this, use <code>android.preference.RingtonePreference</code>
+                which will use the system dialog.</p>
 
-<p>If you won't be extending <code>AppCompatPreferenceActivity</code>, you'll need to specify all preferences in XML by their fully qualified class name.</p>
+            <p>If you won't be extending <code>AppCompatPreferenceActivity</code>, you'll need to
+                specify all preferences in XML by their fully qualified class name.</p>
 
-<h2>
-<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h2>
+            <h2>
+                <a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span
+                        class="octicon octicon-link"></span></a>Changelog</h2>
 
-<p><strong>0.4.2</strong></p>
+            <p><strong>0.4.2</strong></p>
 
-<ul>
-<li>
-<code>SeekBar</code> tinting can be turned off via <code>app:asp_tintSeekBar="false"</code>
-</li>
-<li>Introduced missing <code>seekBarDialogPreference</code> style</li>
-</ul>
+            <ul>
+                <li>
+                    <code>SeekBar</code> tinting can be turned off via <code>app:asp_tintSeekBar="false"</code>
+                </li>
+                <li>Introduced missing <code>seekBarDialogPreference</code> style</li>
+            </ul>
 
-<p><strong>0.4.1</strong></p>
+            <p><strong>0.4.1</strong></p>
 
-<ul>
-<li>Ringtone picker strings are now taken dynamically from <code>android</code> and <code>com.android.providers.media</code> packages, falls back to English
+            <ul>
+                <li>Ringtone picker strings are now taken dynamically from <code>android</code> and
+                    <code>com.android.providers.media</code> packages, falls back to English
 
-<ul>
-<li>These are accessible via <code>RingtonePickerActivity.get*String(Context)</code>
-</li>
-</ul>
-</li>
-</ul>
+                    <ul>
+                        <li>These are accessible via <code>RingtonePickerActivity.get*String(Context)</code>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-<p><strong>0.4.0</strong></p>
+            <p><strong>0.4.0</strong></p>
 
-<ul>
-<li>
-<em>NEW!</em> Implemented SeekBarPreference according to <a href="http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs">http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs</a>
-</li>
-<li>
-<em>FIXED:</em> tinting/padding in DialogPreference and SeekBarDialogPreference</li>
-<li>AppCompatPreferenceActivity and PreferenceFragment now implement Factory</li>
-<li>
-<em>NEW!</em> app:asp_dialogIconPaddingEnabled attribute</li>
-</ul>
+            <ul>
+                <li>
+                    <em>NEW!</em> Implemented SeekBarPreference according to <a
+                        href="http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs">http://www.google.com/design/spec/components/dialogs.html#dialogs-confirmation-dialogs</a>
+                </li>
+                <li>
+                    <em>FIXED:</em> tinting/padding in DialogPreference and SeekBarDialogPreference
+                </li>
+                <li>AppCompatPreferenceActivity and PreferenceFragment now implement Factory</li>
+                <li>
+                    <em>NEW!</em> app:asp_dialogIconPaddingEnabled attribute
+                </li>
+            </ul>
 
-<p><strong>0.3.0</strong></p>
+            <p><strong>0.3.0</strong></p>
 
-<ul>
-<li>Removed <code>MultiCheckPreference</code> as it was only partially implemented and <code>MultiSelectListPreference</code> provides the same function.</li>
-<li>
-<code>MultiSelectListPreference</code> is now available since API 7 (formerly API 11). Uses <code>JSONArray</code> to persist <code>Set&lt;String&gt;</code>.</li>
-<li>API for persisting and accessing string sets since API 7 is available via <code>SharedPreferencesCompat</code>.</li>
-<li>
-<code>Preference</code>s now support <code>app:asp_iconPaddingEnabled</code> attribute which allows to better align non-launcher icons to 16dp keyline.</li>
-<li>Custom preferences are now recycled which fixed animation issues on Lollipop.</li>
-<li>Custom preferences are now always inflated on all platforms if using <code>AppCompatPreferenceActivity</code> and/or custom <code>PreferenceFragment</code>.</li>
-<li>Library no longer includes <code>android.permission.READ_EXTERNAL_STORAGE</code> permission (used to read ringtones). You have to do it yourself.
+            <ul>
+                <li>Removed <code>MultiCheckPreference</code> as it was only partially implemented
+                    and <code>MultiSelectListPreference</code> provides the same function.
+                </li>
+                <li>
+                    <code>MultiSelectListPreference</code> is now available since API 7 (formerly
+                    API 11). Uses <code>JSONArray</code> to persist <code>Set&lt;String&gt;</code>.
+                </li>
+                <li>API for persisting and accessing string sets since API 7 is available via <code>SharedPreferencesCompat</code>.
+                </li>
+                <li>
+                    <code>Preference</code>s now support <code>app:asp_iconPaddingEnabled</code>
+                    attribute which allows to better align non-launcher icons to 16dp keyline.
+                </li>
+                <li>Custom preferences are now recycled which fixed animation issues on Lollipop.
+                </li>
+                <li>Custom preferences are now always inflated on all platforms if using <code>AppCompatPreferenceActivity</code>
+                    and/or custom <code>PreferenceFragment</code>.
+                </li>
+                <li>Library no longer includes <code>android.permission.READ_EXTERNAL_STORAGE</code>
+                    permission (used to read ringtones). You have to do it yourself.
 
-<ul>
-<li>This is needed because the custom picker is part of the app and not provided by system.</li>
-<li>You are of course free to use <code>android.preference.RingtonePreference</code> when necessary.</li>
-</ul>
-</li>
-</ul>
+                    <ul>
+                        <li>This is needed because the custom picker is part of the app and not
+                            provided by system.
+                        </li>
+                        <li>You are of course free to use <code>android.preference.RingtonePreference</code>
+                            when necessary.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-<p><strong>0.2.2</strong></p>
+            <p><strong>0.2.2</strong></p>
 
-<ul>
-<li>optional tinting via <code>app:asp_tintIcon="true"</code> and <code>app:asp_tintDialogIcon="true"</code> and <code>asp_tint</code> and <code>asp_tintMode</code>.</li>
-</ul>
+            <ul>
+                <li>optional tinting via <code>app:asp_tintIcon="true"</code> and <code>app:asp_tintDialogIcon="true"</code>
+                    and <code>asp_tint</code> and <code>asp_tintMode</code>.
+                </li>
+            </ul>
 
-<p><strong>0.2.1</strong></p>
+            <p><strong>0.2.1</strong></p>
 
-<ul>
-<li>No need for <code>net.xpece.android.support.preference.</code> prefix in XML files defining preferences, framework will choose automatically:
+            <ul>
+                <li>No need for <code>net.xpece.android.support.preference.</code> prefix in XML
+                    files defining preferences, framework will choose automatically:
 
-<ul>
-<li><s>On Lollipop native <code>Preference</code>, <code>CheckBoxPreference</code>, <code>SwitchPreference</code> will be used.</s></li>
-<li><s>Otherwise support version will be used.</s></li>
-<li><s>Force either version by using fully qualified class name.</s></li>
-<li>You need to use <code>AppCompatPreferenceActivity</code> or special <code>PreferenceFragment</code> both of which are provided.</li>
-</ul>
-</li>
-<li><s>Added <code>PreferenceCompat#setChecked(Preference, boolean)</code> helper method.</s></li>
-</ul>
+                    <ul>
+                        <li><s>On Lollipop native <code>Preference</code>,
+                            <code>CheckBoxPreference</code>, <code>SwitchPreference</code> will be
+                            used.</s></li>
+                        <li><s>Otherwise support version will be used.</s></li>
+                        <li><s>Force either version by using fully qualified class name.</s></li>
+                        <li>You need to use <code>AppCompatPreferenceActivity</code> or special
+                            <code>PreferenceFragment</code> both of which are provided.
+                        </li>
+                    </ul>
+                </li>
+                <li><s>Added <code>PreferenceCompat#setChecked(Preference, boolean)</code> helper
+                    method.</s></li>
+            </ul>
 
-<p><strong>0.1.2</strong></p>
+            <p><strong>0.1.2</strong></p>
 
-<ul>
-<li>Czech strings</li>
-<li>
-<code>SeekBar</code> in <code>SeekBarDialogActivity</code> uses <code>ColorFilter</code> to match theme</li>
-</ul>
+            <ul>
+                <li>Czech strings</li>
+                <li>
+                    <code>SeekBar</code> in <code>SeekBarDialogActivity</code> uses <code>ColorFilter</code>
+                    to match theme
+                </li>
+            </ul>
 
-<p><strong>0.1.1</strong></p>
+            <p><strong>0.1.1</strong></p>
 
-<ul>
-<li>Initial release</li>
-<li>Backported material style and icon capability for <code>Preference</code> children</li>
-<li>Backported <code>SwitchPreference</code>
-</li>
-<li>Material styled <code>RingtonePreference</code> picker dialog/activity</li>
-</ul>
+            <ul>
+                <li>Initial release</li>
+                <li>Backported material style and icon capability for <code>Preference</code>
+                    children
+                </li>
+                <li>Backported <code>SwitchPreference</code>
+                </li>
+                <li>Material styled <code>RingtonePreference</code> picker dialog/activity</li>
+            </ul>
 
-<h2>
-<a id="work-tbd" class="anchor" href="#work-tbd" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work TBD</h2>
+            <h2>
+                <a id="work-tbd" class="anchor" href="#work-tbd" aria-hidden="true"><span
+                        class="octicon octicon-link"></span></a>Work TBD</h2>
 
-<ul>
-<li>Look into styling multi-pane header preferences</li>
-</ul>
+            <ul>
+                <li>Look into styling multi-pane header preferences</li>
+            </ul>
 
-<h2>
-<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Known issues</h2>
+            <h2>
+                <a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span
+                        class="octicon octicon-link"></span></a>Known issues</h2>
 
-<ul>
-<li>Doesn't work well with fragment headers. Use simple preference layout as much as possible.</li>
-<li>Multilingual strings for Ringtone picker activity are not pulled yet.</li>
-</ul>
+            <ul>
+                <li>Doesn't work well with fragment headers. Use simple preference layout as much as
+                    possible.
+                </li>
+                <li>Multilingual strings for Ringtone picker activity are not pulled yet.</li>
+            </ul>
 
-<p>If you want Holo seek bar on Gingerbread, copy necessary resources from SDK to your project, define
-custom <code>Widget.Something.SeekBar</code> style and override <code>android:seekBarStyle</code> in your theme appropriately.</p>
+            <p>If you want Holo seek bar on Gingerbread, copy necessary resources from SDK to your
+                project, define
+                custom <code>Widget.Something.SeekBar</code> style and override <code>android:seekBarStyle</code>
+                in your theme appropriately.</p>
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/consp1racy/android-support-preference/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/consp1racy/android-support-preference/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+            <a href="https://github.com/consp1racy/android-support-preference/zipball/master"
+               class="button">
+                <small>Download</small>
+                .zip file
+            </a>
+            <a href="https://github.com/consp1racy/android-support-preference/tarball/master"
+               class="button">
+                <small>Download</small>
+                .tar.gz file
+            </a>
 
-          <p class="repo-owner"><a href="https://github.com/consp1racy/android-support-preference"></a> is maintained by <a href="https://github.com/consp1racy">consp1racy</a>.</p>
+            <p class="repo-owner"><a
+                    href="https://github.com/consp1racy/android-support-preference"></a> is
+                maintained by <a href="https://github.com/consp1racy">consp1racy</a>.</p>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+            <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using
+                the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
-      </div>
     </div>
+</div>
 
-  
-  </body>
+
+</body>
 </html>
